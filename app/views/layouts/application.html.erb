@@ -8,11 +8,16 @@
   <script type="text/javascript">
     if (window.location.hash == '#_=_')window.location.hash = '';
   </script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
 </head>
-<body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-<%= yield %>
 
+<%= render 'layouts/header' %>
+<div class = "container" =>
+  <%= yield %>
+</div>
+
+<footer>
+    <p id="footerChar">Copyright© Team Lexus All Rights Reserved.</p>
+</footer>
 </body>
 </html>
