@@ -68,3 +68,4 @@ end
 
 gem 'rb-readline'
 gem 'whenever', :require => false
+gem 'rails_12factor', group: :production
