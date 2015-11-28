@@ -1,0 +1,545 @@
+
+ja:
+  views:
+    pagination:
+      first: "&laquo; 最初"
+      last: "最後&raquo;"
+      previous: "&lsaquo; 前"
+      next: "次 &rsaquo;"
+      truncate: "..."
+  helpers:
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "%{count}件"
+          one: "%{count}件"
+          other: "%{count}件"
+      more_pages:
+        display_entries: "%{first}〜%{last} / %{total}件"
+    select:
+      prompt: 選択してください。
+    submit:
+      create: 登録
+      submit: 保存
+      update: 更新
+      delete: 削除
+  date:
+    abbr_day_names:
+    - 日 - 月
+    - 火
+    - 水
+    - 木
+    - 金
+    - 土
+    abbr_month_names:
+    -
+    - 1月
+    - 2月
+    - 3月
+    - 4月
+    - 5月
+    - 6月
+    - 7月
+    - 8月
+    - 9月
+    - 10月
+    - 11月
+    - 12月
+    day_names:
+    - 日曜日
+    - 月曜日
+    - 火曜日
+    - 水曜日
+    - 木曜日
+    - 金曜日
+    - 土曜日
+    formats:
+      default: ! '%Y/%m/%d'
+      long: ! '%Y年%m月%d日(%a)'
+      short: ! '%m/%d'
+    month_names:
+    -
+    - 1月
+    - 2月
+    - 3月
+    - 4月
+    - 5月
+    - 6月
+    - 7月
+    - 8月
+    - 9月
+    - 10月
+    - 11月
+    - 12月
+    order:
+    - :year
+    - :month
+    - :day
+  datetime:
+    formats:
+      default: ! '%Y/%m/%d %H:%M'
+      long: ! '%Y年%m月%d日(%a) %H時%M分'
+      short: ! '%H:%M'
+    distance_in_words:
+      about_x_hours:
+        one: 約1時間
+        other: 約%{count}時間
+      about_x_months:
+        one: 約1ヶ月
+        other: 約%{count}ヶ月
+      about_x_years:
+        one: 約1年
+        other: 約%{count}年
+      almost_x_years:
+        one: 1年弱
+        other: ! '%{count}年弱'
+      half_a_minute: 30秒前後
+      less_than_x_minutes:
+        one: 1分以内
+        other: ! '%{count}分以内'
+      less_than_x_seconds:
+        one: 1秒以内
+        other: ! '%{count}秒以内'
+      over_x_years:
+        one: 1年以上
+        other: ! '%{count}年以上'
+      x_days:
+        one: 1日
+        other: ! '%{count}日'
+      x_minutes:
+        one: 1分
+        other: ! '%{count}分'
+      x_months:
+        one: 1ヶ月
+        other: ! '%{count}ヶ月'
+      x_seconds:
+        one: 1秒
+        other: ! '%{count}秒'
+    prompts:
+      day: 日
+      hour: 時
+      minute: 分
+      month: 月
+      second: 秒
+      year: 年
+  errors: &errors
+    format: ! '%{attribute}%{message}'
+    messages:
+      accepted: に同意してください。
+      blank: を入力してください。
+      confirmation: が一致しません。
+      empty: を入力してください
+      equal_to: は%{count}にしてください。
+      even: は偶数にしてください。
+      exclusion: は予約されています。
+      greater_than: は%{count}より大きい値にしてください。
+      greater_than_or_equal_to: は%{count}以上の値にしてください。
+      inclusion: は一覧にありません。
+      invalid: を正しく入力して下さい。
+      less_than: は%{count}より小さい値にしてください。
+      less_than_or_equal_to: は%{count}以下の値にしてください。
+      not_a_number: は数値で入力してください。
+      not_an_integer: は整数で入力してください。
+      odd: は奇数にしてください。
+      record_invalid: バリデーションに失敗しました。 %{errors}
+      taken: はすでに登録されています。
+      too_long: は%{count}文字以内で入力してください。
+      too_short: は%{count}文字以上で入力してください。
+      wrong_length: は%{count}文字で入力してください。
+      image_size: の画像サイズは320x50(30KB以内)、300x50(30KB以内)、480x480(50KB以内)のいずれかのサイズのみ有効です。
+      restaurant_image_size: の画像サイズは720x480pxのサイズのみ有効です。
+      restaurant_main_image_size: の画像サイズは940x260pxのサイズのみ有効です。
+      restaurant_chef_image_size: の画像サイズは80x80pxのサイズのみ有効です。
+      restaurant_image_for_ogp_size: の画像サイズは200x200px以上の正方形のみ有効です。
+      invalid_datetime: "正しい日時を入力してください。"
+      invalid_csv_file: csvファイルを選択してください。
+      banner_retina_image_size: の画像サイズは1091x457pxのサイズのみ有効です。
+      banner_pc_image_size: の画像サイズは450x300pxのサイズのみ有効です。
+      banner_mobile_image_size: の画像サイズは600x240pxのサイズのみ有効です。
+      invalid_image_file: を選択してください。
+      seat_count_to: の順番が正しくありません。
+      seat_end_datetime: の時刻が正しくありません。また日付をまたいだ登録は現在対応しておりません。
+      full_width_number: に全角数字が含まれています。
+      is_restaurant_holiday: は休業日なので指定できません。
+      end_datetime: の範囲指定が適切ではありません。
+      date: 2015-01-01の形式で入力してください
+      alphanumeric: は半角英数字で入力して下さい
+      published_week: の入力が不足しているか週が正しくありません。
+      not_found: は登録されていません。
+      invalid_date: の指定が不正です。
+      invalid_date_format: の形式が不正です。
+      invalid: は無効です。
+      already_registered: はすでに登録されています。
+      overlimit: "は1万円以上は対応しておりません。(キャリア決済の場合)"
+    template:
+      body: 次の項目を確認してください。
+      header:
+        one: ! '%{model}にエラーが発生しました。'
+        other: ! '%{model}に%{count}個のエラーが発生しました。'
+  number:
+    currency:
+      format:
+        delimiter: ! ','
+        format: ! '%n%u'
+        precision: 0
+        separator: .
+        significant: false
+        strip_insignificant_zeros: false
+        unit: 円
+    format:
+      delimiter: ! ','
+      precision: 3
+      separator: .
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: ! '%n %u'
+        units:
+          billion: 十億
+          million: 百万
+          quadrillion: 千兆
+          thousand: 千
+          trillion: 兆
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: ! '%n%u'
+        units:
+          byte: バイト
+          gb: ギガバイト
+          kb: キロバイト
+          mb: メガバイト
+          tb: テラバイト
+    percentage:
+      format:
+        delimiter: ''
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: と
+      two_words_connector: と
+      words_connector: と
+  time:
+    am: 午前
+    pm: 午後
+  activerecord:
+    errors:
+      models:
+        brochure:
+          attributes:
+            brochure_courses:
+              too_long: 'は最大%{count}資格まで選択できます。'
+    attributes:
+      user:
+        id: ID
+        email: メールアドレス
+        email_confirmation: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード
+        firstname: 名
+        lastname: 姓
+        firstname_kana: メイ
+        lastname_kana: セイ
+        nickname: ニックネーム
+        sex: 性別
+        birthday: 生年月日
+        zip_code: 郵便番号
+        prefecture: 都道府県
+        city: 市区町村
+        address: 番地・ビル名
+        job: 職業
+        tel: 電話番号
+        facebook_id: FacebookID
+        token: トークン
+        gmopg_member_id: GMOPG顧客ID
+        admin_updated_memo: 管理者メモ
+      admin_user:
+        login_name: ログイン名
+        show_name: 表示名
+        password: パスワード
+        password_confirmation: パスワード
+        role: 権限
+      brochure:
+        id: ID
+        email: メールアドレス
+        email_confirmation: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード
+        firstname: 名
+        lastname: 姓
+        firstname_kana: メイ
+        lastname_kana: セイ
+        nickname: ニックネーム
+        sex: 性別
+        birthday: 生年月日
+        zip_code: 郵便番号
+        prefecture: 都道府県
+        city: 市区町村
+        address: 番地・ビル名
+        job: 職業
+        tel: 電話番号
+        note: 備考
+        brochure_courses: 資料請求
+      plan:
+        id: ID
+        certificate_id: 資格
+        plan_group_id: プラングループ
+        name: プラン名称
+        full_name: プランフル名称
+        price: 価格
+        term: 期間(月)
+        term_date: 期間(日付)
+        term_type: 期間指定方法
+        unit_price: 1ヶ月あたりの金額
+        continue_flag: 継続
+        display_member_flag: 会員のみ表示
+        position: 並び順
+        is_recommend: オススメ
+      lecture:
+        id: ID
+        title: 講座名
+        free_flag: 無料フラグ
+        position: 並び順
+        lecture_teachers: 講座内講師
+        pdfs: PDFファイル
+        movies: 動画
+        published_on: 公開日
+        announcement: 公開予告文言
+      teacher:
+        id: ID
+        name: 講師名
+        full_name: 講師姓名
+        simple_text: 簡易説明
+        description_text: 詳細説明
+        profile: プロフィール
+      image:
+        image: プロフィール画像
+      parent_lecture:
+        page_id: ページ
+        title: 親講座名
+        position: 並び順
+        parent_lecture_teachers: 親講座内講師
+      page:
+        title: ページ名
+        symbol: シンボル
+        position: 並び順
+        description_text: 説明文
+        new_flag: 新システム移行済み
+      certificate:
+        id: ID
+        name: 資格名
+        symbol: シンボル
+        category: カテゴリ
+        service_description: 有料サービス説明
+        option_service_description: オプションサービス説明
+      course:
+        id: ID
+        name: 講座名
+        contents_text: 有料コンテンツ一覧
+        free_text: 無料講座
+        symbol: シンボル
+        sp_free_text: スマホ無料講座
+        upload_schedule_file: スケジュールファイル
+        question_url: 質問機能URL
+        course_pages: 対象ページ
+      topic:
+        id: ID
+        display_date: 表示日付
+        title: タイトル
+      notice:
+        id: ID
+        display_date: 表示日付
+        title: タイトル
+      credit_payment:
+        certificate_id: 資格
+        plan_id: プラン
+        pay_method: お支払い方法
+        pay_times: お支払い回数
+      credit_card:
+        pay_card_no: カード番号
+        pay_expire_month: 月
+        pay_expire_year: 年
+        pay_scc: セキュリティコード
+      charge:
+        id: ID
+        plan_id: 契約コース
+        started_on: 開始日
+        finished_on: 終了日
+        admin_updated_memo: 管理者メモ
+      cvs_payment:
+        certificate_id: 資格
+        plan_id: プラン
+        cvs: コンビニ
+        tel: 電話番号
+        firstname: 姓
+        email: email
+        lastname: 名
+        firstname_kana: セイ
+        lastname_kana: メイ
+      carrier_payment:
+        certificate_id: 資格
+        plan_id: プラン
+        carrier: キャリア
+      payment:
+        certificate_id: 資格
+        plan_id: プラン
+        amount: 金額
+      course_menu:
+        id: ID
+        name: メニュー名
+        url: URL
+      option_plan:
+        id: ID
+        certificate_id: 対象資格
+        plan_id: 対象プラン
+        name: オプション名
+        price: 価格
+        num: 付与個数
+      user_coupon:
+        coupon_id: クーポン
+        user_id: 会員
+        coupon_code: クーポンコード
+      content:
+        name: コンテンツ名
+        content_path: パス
+        keyword: Keyword
+        description: Description
+        content: PC用コンテンツ
+        mobile_content: モバイル用コンテンツ
+        title: タイトル
+        head_content: HEAD内コンテンツ
+        is_layout: レイアウトの有無
+        is_login: ログインの有無
+      coupon:
+        name: クーポン名
+        code: クーポンコード
+        discount_type: 割引タイプ
+        discount_price: 割引
+        term_type: 有効期間タイプ
+        term_days: 有効日数
+        term_date: 有効日付
+        target_coupon_type: 対象クーポンタイプ
+        coupon_plans: 対象クーポン
+      coupon_plan:
+        coupon_id: クーポン
+        certificate_id: 資格
+        plan_id: プラン
+      issue_coupon:
+        id: ID
+        coupon_id: 発行クーポン
+        action_type: クーポン発行アクション
+        plan_id: 対象プラン
+      corporate:
+        name: 法人名
+        email: メールアドレス
+        email_confirmation: メールアドレス再入力
+        tel: 電話番号
+        address: 住所
+        login_name: アカウント名
+        password: パスワード
+        password_confirmation: パスワード再入力
+      advance_register:
+        email: メールアドレス
+        adv_type: 特典タイプ
+        adv_code: 読者特典コード
+      plan_content:
+        course_id: コース
+        plan_id : プラン
+        position: 並び順
+      plan_group:
+        name: 管理用グループ名
+  label:
+    error:
+      payment:
+        destroy: "決済のキャンセルに失敗しました"
+    payment:
+      type:
+        payment: '未選択'
+        credit_payment: "クレジットカード"
+        cvs_payment: "コンビニ"
+        docomo_payment: "DoCoMo払い"
+        softbank_payment: "Softbank払い"
+        bank_transfer_payment: "銀行振込"
+        account_transfer_payment: "口座振替"
+        cedyna_payment: "セディナ教育ローン決済"
+    credit_payment:
+      pay_method:
+        one: 一括払い
+        many: 分割払い
+      pay_times:
+        three: 3回払い
+        six: 6回払い
+        twelve: 12回払い
+        eighteen: 18回払い
+    cvs_payment:
+      cvs:
+        lawson: ローソン
+        family_mart: ファミリーマート
+        sunkus: サンクス
+        circle_k: サークルK
+        ministop: ミニストップ
+        daily_yamazaki: デイリーヤマザキ
+        seven_eleven: セブンイレブン
+      cvs_label:
+        default: お客様番号
+        online_no: オンライン決済番号
+        haraikomi: 払込票番号
+    carrier_payment:
+      carrier:
+        docomo: docomo
+        softbank: SoftBank
+    plan:
+      name: プラン名
+    certificate:
+      menu_category:
+        law: 法律資格
+        accounts: 会計資格
+        intellectual: 知財資格
+        employment: 公務員・就職
+        estate: 不動産系
+        marketing: マーケティング系など
+    charge:
+      id: ID
+      plan_id: 契約プラン
+      started_on: 開始日
+      finished_on: 終了日
+    coupon:
+      discount_type:
+        rate: "%引き"
+        yen: 円引き
+      term_type:
+        days: 付与からの日数
+        date: 特定年月日
+        none: 期間なし
+      target_coupon_type:
+        all: すべて
+        plan: 特定プラン
+    issue_coupon:
+      id: ID
+      action_type:
+        birthday: 誕生日
+        pay: プラン新規加入時
+    corporate_plan:
+      bread_title: 法人契約プラン一覧
+      bread_title_corporate: 法人管理
+      title: 法人契約プラン管理
+      plan_title: 契約プラン一覧
+      confirm_delete_title: こちらの法人を削除しますか？
+      plan_name: 契約プラン名
+      add_corporate: この法人に契約プランを追加する
+    plan_content:
+      bread_title: プラン対象コンテンツ一覧
+      bread_title_plan: プラン管理
+      title: プラン対象コンテンツ管理
+      plan_title: コース一覧
+      confirm_delete_title: こちらのコースを削除しますか？
+      course_name: コース名
+      add_plan: このプランにコースを追加する
+      course_id: コース

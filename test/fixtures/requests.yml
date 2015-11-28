@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  request_user_id: 1
+  commit_user_id: 1
+  name: MyString
+  datetime: 2015-11-28 20:06:48
+  comment: MyText
+
+two:
+  request_user_id: 1
+  commit_user_id: 1
+  name: MyString
+  datetime: 2015-11-28 20:06:48
+  comment: MyText
