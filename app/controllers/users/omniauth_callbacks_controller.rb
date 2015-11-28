@@ -19,18 +19,13 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
           email: auth.info.email,
           name: auth.info.name,
           image: auth.info.image,
-          facebook_id: auth.uid
+          uid: auth.uid
         }
-        user = User.where(email: user_params[:email]).first
-        if user.blank?
-          session[:fbuser] = user_params
-          return redirect_to new_user_registration_path
-        end
+        user = User.new(user_params)
+        user.save(validate: false)
       end
-      user_params ||= {uid: auth.uid}
-      user.update(user_params)
       sign_in user
-      return redirect_to mypage_profile_path
+      return redirect_to mypage_path(user.id)
       #provider = provider.to_s
       #@user = User.find_for_oauth(request.env['omniauth.auth'])
       #if @user.persisted?

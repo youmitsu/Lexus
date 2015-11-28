@@ -12,6 +12,6 @@ class RequestsController < ApplicationController
 
   private
     def request_params
-       params.require(:request).permit(:name, :datetime, :comment)
+      params.require(:request).permit(:name, :datetime, :comment)
     end
 end

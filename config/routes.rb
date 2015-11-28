@@ -4,10 +4,13 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   root to: "top#index"
   resources :requests
+  resources :mypage
 
   devise_for :users, path_names: { sign_in: "login", sign_out: "logout"},
     controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
   get 'mypage/profile', to: 'mypage#profile'
+
+  get 'mypage/owner', to: 'mypage#owner'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

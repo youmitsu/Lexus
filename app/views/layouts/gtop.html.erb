@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hackathon1128</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <script type="text/javascript">
+    if (window.location.hash == '#_=_')window.location.hash = '';
+  </script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+</head>
+<body id="top">
+  <%= yield %>
+</body>
+
+<footer>
+    <p id="footerChar">Copyright© Team Lexus All Rights Reserved.</p>
+</footer>
+</body>
+</html>

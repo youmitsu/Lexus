@@ -1,3 +1,98 @@
 // Place all the styles related to the top controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body#top {
+  .jumbotron{
+    padding-top:70px;
+    padding-bottom:70px;
+    margin-bottom:30px;
+    color:whitesmoke;
+    /*background-image:url(../../dogdogtop.jpg);*/
+    background-repeat: no-repeat;
+    background: url(http://mattgrossdesign.com/raw-media/first-frame-screencap.jpg) #333;
+    background-attachment: fixed;
+    /*background-position: right;*/
+    background-size: cover ;
+  }
+
+  .heading{
+    padding-top: 60px;
+    padding-bottom: 30px;
+    color: #5f5d60;
+  }
+
+  video {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+
+  .header_img{
+    position: relative;
+    overflow: hidden;
+  }
+  .youtube_bg{
+    position: relative;
+    margin-top: -55px;
+    margin-bottom: -100px;
+    margin-left: px;
+    margin-right: px;
+    padding: 0 0 60%;
+    overflow: hidden;
+  }
+  /*.youtube_bg:hover{
+      margin-bottom: 0px;
+  }*/
+  .youtube_bg iframe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  @media screen and (max-width:600px){
+    .youtube_bg{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+  }
+  .header_img p{
+    display: block;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    z-index: 200;
+  }
+  @media screen and (max-width:780px){
+    .header_img p{
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      text-align: center;
+      -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+      -transform: translate(-50%,-50%);
+    }
+  }
+  .top_header_catch01{
+    display: block;
+    color: #fff;
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 1.4;
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);
+  }
+  .top_header_catch02{
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.4;
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);
+  }
+  .jumbotron{
+    padding-top:190px;
+    padding-bottom:190px;
+  }
+}

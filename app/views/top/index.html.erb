@@ -1,1 +1,75 @@
-<%= link_to 'ログアウト', destroy_user_session_path, method: 'delete' %>
+  <nav class="navbar navbar-default navbar-fixed-top"> 　<!-- 固定する場合は　navbar-fixed-top　を付け足せば良い　-->
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html" ><img src="/images/dogingLogo2.png" width="200" height="60"></a>
+      </div>
+
+      <div id="navbar" class="navbar-collapse collapse">
+        <form class="navbar-form navbar-right">
+          <%= link_to 'ログイン', user_omniauth_authorize_path(:facebook), class: "btn btn-success" %></font>
+        </form>
+      </div><!--/.navbar-collapse -->
+    </div>
+  </nav>
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="header_img">
+      <div class="youtube_bg">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/CRGkk0eCpP4?rel=0&showinfo=0&autoplay=1&loop=1&playlist=CRGkk0eCpP4" frameborder="0" allowfullscreen></iframe>
+        <p>
+      <span class="top_header_catch01"><br>散歩してくれる人を探そう</span>
+      <span class="top_header_catch02">Dogingは、あなたの犬を散歩してくれる人を安心・簡単に探せるサービスです。<br><br>
+      </span>
+      <span class="top_header_catch02">　　　　　　　　　　　　　　　
+      <%= link_to  user_omniauth_authorize_path(:facebook), class: "btn btn-primary btn-lg" do %>
+        <font size="6"><i class="fa fa-facebook-official"></i>　Facebookで無料登録　</a><br>
+      <% end %>
+      <divu class="fb-like" data-share="true" data-width="450" data-show-faces="true"></divu>
+      </span>
+       </p>
+        </div>
+      </div>
+      <!--<div class="container">
+        <h1>散歩してくれる人を探そう</h1></span>
+        <p>Dogingは、あなたの犬を散歩してくれる人を安心・簡単に探せるサービスです。</p>
+        <br>
+        <div align="center"><a class="btn btn-primary btn-lg" href="to_mypage.php" role="button">
+          　<font size="6"><i class="icon-facebook-sign"></font></i>　Facebookで無料登録　</a></div>
+          <div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
+      </div> -->
+    <div class="container">
+      <!-- Example row of columns -->
+      <div align="center"><h2><br>Dogingの特徴</h2><br></div>
+      <div class="row">
+        <div class="col-md-4">
+          <div align="center"><img src="/images/easy.jpg" width="150" height="150"></div>
+          <div align="center"><h3>簡単に検索</h3></div>
+          <p> 　Dogingは、マッチングに特化したサービスです。すぐにユーザーを見つけることができるはずです。</p>
+        </div>
+        <div class="col-md-4">
+          <div align="center"><img src="/images/heart.png" width="150" height="150"></div>
+          <div align="center"><h3>安心して利用</h3></div>
+          <p>　Dogingで働く人は、詳細な個人情報を公開しているので安心してワンちゃんを預けることができます。</p>
+       </div>
+        <div class="col-md-4">
+          <div align="center"><img src="/images/hands.jpg" width="150" height="150"></div>
+           <div align="center"><h3>新たな出会い</h3></div>
+          <p>　Dogingは、ワンちゃん好きが集まるので新たな出会いが期待できます。</p></div>
+        </div>
+      </div>
+    <div class="message-wrapper">
+      <div class="container">
+      <div class="heading">
+        <div align="center"><h2>さぁ、あなたもDogingを使ってみませんか?</h2></div>
+        <div align="center"><h3>Connecting dog owners with dog loving borrowers & professional dog sitters.</h3></div>
+      </div>
+    </div>
+    </div>
+    <hr>
+  </div>
