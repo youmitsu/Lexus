@@ -56,6 +56,7 @@ gem 'omniauth-facebook'
 gem 'twitter'
 gem 'omniauth-twitter'
 gem 'jpmobile'
+gem "ransack"
 
 group :development, :test do
   gem 'hirb'

@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="page-header">
+      <h1><%= @request.user.name %></h1>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row ">
+    <div class="my bcb col-xs-6 row panel-default" style="border-style: solid ; border-width: 1px; padding: 10px 5px 10px 20px; margin-top:20px;">
+      <div class="name col-xs-8 text-center panel-body">
+        <div align="left">名前 : <%= link_to @request.user.name, mypage_path(@request.user) %></div>
+      </div>
+      <br>
+      <div class="place col-xs-8 text-center panel-body">
+        <div align="left">email : <%= @request.user.email %></div>
+      </div>
+      <div class="panel-body">
+        <div class="date col-xs-4"><%= @request.datetime.strftime('%Y年%m月%d日') %></div>
+        <div class="time col-xs-4 "><%= @request.datetime.strftime('%H時%M分〜') %></div>
+        <div class="time col-xs-4 "><%= @request.time %>分</div>
+      </div>
+    </div>
+    <div class="photo col-xs-6 text-center" >
+      <% if @request.user.dogs.present? %>
+        <% @request.user.dogs.each do |dog| %>
+          <%= image_tag "#{dog.image}?type=large", width: "280px" %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="form-group">
+  <div class="col-lg-10 col-lg-offset-2">
+    <% if current_user.id == @request.request_user_id %>
+      <% if @request.commit_user_id.nil? %>
+        <%= link_to '編集する', edit_request_path, class: "btn btn-primary" %>
+        <%= link_to '削除する', @request, method: :delete, data: { confirm: '本当に削除しますか？' }, class: "btn btn-danger" %>
+      <% end %>
+    <% else %>
+      <%= form_for @receive, url: {action: 'receive' } do |f| %>
+        <%= f.hidden_field :request_id, value: @request.id %>
+        <%= f.hidden_field :receive_user_id, value: current_user.id %>
+        <%= f.submit "申し込む", class: "btn btn-primary" %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

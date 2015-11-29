@@ -1,2 +1,71 @@
-<h1>Request#index</h1>
-<p>Find me in app/views/request/index.html.erb</p>
+  <%= search_form_for @q do |f| %>
+    <div class =" search_form">
+      <center>
+        <h2>散歩検索</h2>
+      </center>
+        <form class="form-horizontal">
+　    　　<div class="form-group col-lg-6">
+            <%= f.label :datetime, "日付", class: "col-lg-4 control-label" %>
+　　  　　　<div class="col-lg-6">
+              <%= f.search_field :datetime, class: "form-control" %>
+            </div>
+          </div>
+        </form>
+    </div>
+  <% end %>
+    <hr />
+    <br />
+    <div class="search_result">
+        <h2>一覧</h2>
+        <div class="col-lg-11">
+        <div class="bs-component">
+          <div class="list-group">
+            <% @requests.each do |request| %>
+              <%= link_to request, class: "list-group-item" do %>
+                <div class="list-group-item">
+                  <h4 class="list-group-item-heading"><%= request.name %></h4>
+                  <p class="list-group-item-text" style="font-size:14px;"><%= request.datetime.strftime('%Y年%m月%d日 %H時%M分〜') %>＜散歩時間：<%= request.time %>分＞</p>
+                </div>
+              <% end %>
+            <% end %>
+
+        <div class="bs-component" style="text-align:center;">
+          <ul class="pagination">
+            <li class="disabled"><a href="#">&laquo;</a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+          </ul>
+        </div>
+      </div>
+
+    <script src="/bootstrap.min.js"></script>
+    <script src="/bootstrap-datepicker.min.js"></script>
+    <script src="/bootstrap-datepicker.ja.min.js"></script>
+    <script>
+
+        $(function () {
+            $('#date').datepicker({
+                format: "yyyy/mm/dd",
+                language: "ja",
+                autoclose: true,
+                orientation: "auto"
+            });
+
+            $('#tp1').timepicker({
+                //    template:      'modal',
+                //    minuteStep:    15,      //
+                //    showSeconds:   true,    //  true/false
+                //    secondStep:    15,      //
+                //    defaultTime:   'current',   //
+                //    showMeridian:  true,    //  true/false
+                showInputs: false,    //  true/false
+                disableFocus: true,    //
+                //    modalBackdrop: true,    //
+            })
+        });
+
+    </script>

@@ -5,6 +5,7 @@ class CreateRequests < ActiveRecord::Migration
       t.integer :commit_user_id
       t.string :name
       t.datetime :datetime
+      t.integer :time
       t.text :comment
 
       t.timestamps null: false

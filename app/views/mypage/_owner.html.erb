@@ -1,55 +1,81 @@
-  <h3>依頼者プロフィール情報
-  <ul>
-    <li>名前</li>
-  </ul>
-   </h3>
-   <li class="list-group-item">
-        <span class="badge">何件</span>
-        ~依頼した案件情報~
-    </li>
-  <div class="col-lg-4 col-md-5 col-sm-6">
+    <h1><%= @user.name %></h1>
+    <div class="col-lg-12">
+      <div class="page-header">
+        <h2 id="dialogs">依頼した案件情報</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
         <aside class="panel panel-default">
           <div class="panel-heading">
-            <h4 class="text-warning">未確定案件</h4>
-          </div>
-          <div class="panel-body">
-            <p>何人</p>
-            <div><button id="anti-yu-gothic-button" class="btn btn-warning btn-block">詳細</button></div>
+            <h3 class="text-warning">未確定案件</h3>
           </div>
         </aside>
-     </div>
-     <div class="col-lg-4 col-md-5 col-sm-6">
+        <div class="bs-component">
+          <ul class="list-group">
+            <% @requesting.each do |request| %>
+              <%= link_to request, class: "list-group-item" do %>
+                <span class="badge"><%= request.receives.nil? || request.receives.count %></span>
+                <%= request.name %>
+              <% end %>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
         <aside class="panel panel-default">
           <div class="panel-heading">
-            <h4 class="text-warning">確定案件</h4>
-          </div>
-          <div class="panel-body">
-            <p>何人</p>
-            <div><button id="anti-yu-gothic-button" class="btn btn-warning btn-block">詳細</button></div>
+            <h3>確定案件</h3>
           </div>
         </aside>
-     </div>
-     <br>
-     <br>
-     <br>
-     <br>
-     <br>
-     <br>
-     <br>
-     <br>
-     <br>
-    <li class="list-group-item">
-        <div class="badge">何件</div>
-    ~受けた案件情報~
-      </li>
-     <div class="col-lg-4 col-md-5 col-sm-6">
+        <div class="bs-component">
+          <ul class="list-group">
+            <% @requested.each do |request| %>
+              <%= link_to request, class: "list-group-item" do %>
+                <span class="badge"><%= request.receives.nil? || request.receives.count %></span>
+                <%= request.name %>
+              <% end %>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12">
+      <div class="page-header">
+        <h2 id="dialogs">受注した案件情報</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
         <aside class="panel panel-default">
           <div class="panel-heading">
-            <h4 class="text-warning">確定案件</h4>
-          </div>
-          <div class="panel-body">
-            <p>何人</p>
-            <div><button id="anti-yu-gothic-button" class="btn btn-warning btn-block">詳細</button></div>
+            <h3 class="text-warning">未確定案件</h3>
           </div>
         </aside>
-     </div>
+        <div class="bs-component">
+          <ul class="list-group">
+            <% @receiveing.each do |receive| %>
+              <%= link_to receive.request, class: "list-group-item" do %>
+                <%= receive.request.name %>
+              <% end %>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <aside class="panel panel-default">
+          <div class="panel-heading">
+            <h3>確定案件</h3>
+          </div>
+        </aside>
+        <div class="bs-component">
+          <ul class="list-group">
+            <% @received.each do |receive| %>
+              <%= link_to receive.request, class: "list-group-item" do %>
+                <%= receive.request.name %>
+              <% end %>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>

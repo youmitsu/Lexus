@@ -1,0 +1,72 @@
+<div class="row1">
+  <div class="col-lg-12">
+    <div class="page-header">
+      <h1 id="forms">ワンちゃんプロフィール入力</h1>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="form-horizontal" role="form">
+      <%= form_for @dog, class: "form-horizonta" do |f| %>
+        <fieldset>
+          <div class="form-group">
+            <%= f.label :name, '名前', class: "col-lg-4 control-label" %>
+            <div class="col-lg-5">
+              <%= f.text_field :name, class: "form-control profile_item", placeholder: "名前" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= f.label :age, '年齢', class: "col-lg-4 control-label" %>
+            <div class="col-lg-1">
+              <%= f.select :age, [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25], {}, class: "form-control" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= f.label :dog_type_id, "性格", class: "col-lg-4 control-label" %>
+            <div class="col-lg-3 profile_item">
+              <%= f.collection_select :dog_type_id, @types, :id, :name, {}, class: "form-control" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= f.label :active, '活動量(1:活発ではない　5:活発)', class: "col-lg-4 control-label" %>
+            <div class="col-lg-3 profile_item">
+              <%= f.select :active, [1,2,3,4,5], {},class: "form-control" %>
+            </div>
+          </div>
+             <div class="form-group">
+            <%= f.label :hair, '抜け毛の量(1:少ない　5:多い)', class: "col-lg-4 control-label" %>
+            <div class="col-lg-1 profile_item">
+              <%= f.select :hair, [1,2,3,4,5], {}, class: "form-control" %>
+            </div>
+          </div>
+            <div class="form-group">
+            <%= f.label :bark, '吠えやすさ(1:あまり吠えない　5:よく吠える)', class: "col-lg-4 control-label" %>
+            <div class="col-lg-1 profile_item">
+              <%= f.select :bark, [1,2,3,4,5],{}, class: "form-control" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <%= f.label :tack, 'しつけ度(1:しつけされていない　5:しつけされている)', class: "col-lg-4 control-label" %>
+            <div class="col-lg-1 profile_item">
+              <%= f.select :tack, [1,2,3,4,5],{}, class: "form-control" %>
+            </div>
+          </div>
+           <div class="form-group">
+            <%= f.label :comment, 'その他注意事項', class: "col-lg-4 control-label" %>
+            <div class="col-lg-7 profile_item" >
+              <%= f.text_area :comment, class: "form-control" %>
+              <span class="help-block"></span>
+            </div>
+          </div>
+          <%= f.hidden_field :user_id, value: current_user.id %>
+          <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-3">
+              <%= f.submit "送信", class:"btn btn-primary" %>
+            </div>
+          </div>
+        </fieldset>
+      <% end %>
+      </div>
+    </div>
+  </div>
